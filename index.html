@@ -4,9 +4,104 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/standard.css" />
     <title>Leonardo - Desenvolvedor</title>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <div class="main-grid">
+      <div id="main-grid-area" class="flex flex-column">
+        <main class="flex flex-row align-center">
+          <img class="circle width-100-px cursor-pointer" src="img/photography.jpeg" />
+          <div class="flex flex-column justify-evenly height-100-p mg-30">
+            <h2>Leonardo Elias de Oliveira</h2>
+            <p>Learning every day... </p>
+          </div>
+        </main>
+  
+        <!-- About -->
+        <div class="mg-30 mt-70">
+          <h2 class="font-size-medium">Um pouco sobre mim</h2>
+          <div class="mg-10 mt-30 width-70-p text-indent text-justify ">
+            <p class="mg-10">
+              Sou desenvolvedor a mais ou menos 9 meses, gosto de desafios... Aprender novas tecnologias, principalmente as mais
+              disruptivas do mercado. Nesse tempo de mercado na área de TI foquei
+              principalmente no desenvolvimento de aplicações WEB, uma área que considero muito interessante.
+            </p>     
+            <p class="mg-10">
+              Me esforço para entender as regras de negócio que envolvem uma aplicação em primeiro momento,
+              por ser um conhecimento tácito, acredito que seja importante e dificultoso.
+            </p>
+            <p class="mg-10">
+              Ah e faço algumas <a href="https://www.twitch.tv/leoeliass/">lives</a> programando algumas idéias próprias para estudar tecnologias e matar 
+              minha curiosidade sobre alguns assuntos, =)
+            </p>
+          </div>
+        </div>
+    
+        <!-- Links sessions -->
+        <div class="mg-30">
+          <h2 class="font-size-medium">Tecnologias</h2>
+          <p class="mg-10">Essas são algumas das principais <strong>tecnologias</strong> que já trabalhei.</p>
+    
+          <div class="flex flex-row align-center flex-gap">
+            <img class="circle width-50-px cursor-pointer" src="img/nodejs.png" title="Node.js" />
+            <img class="circle width-50-px cursor-pointer" src="img/java.png" title="Java" />
+            <img class="circle width-50-px cursor-pointer" src="img/python.png" title="Python" />
+            <img class="circle width-50-px cursor-pointer" src="img/docker.png" title="Docker" />
+          </div>
+       
+        </div>    
+      </div>
+
+      <!-- Trabalhos ja feitos -->
+      <div id="aside-grid-area" class="flex flex-column mt-30 align-center">
+        <h2 class="font-size-medium">Experiência e trabalho</h2>
+
+        <div class="flex flex-column">
+
+          <div class="flex flex-column mt-30">
+            <div class="flex flex-row align-center">
+              <div class="width-50-px flex flex-row align-center mg-10">
+                <img src="img/delivoro.png" class="circle width-50-px cursor-pointer" />
+              </div>
+              <h3>Desenvolvedor - Estagiário</h3>
+            </div>
+            <p class="mt-15">
+              Atuei no desenvolvimento Web do sistema de gestão de delivery (Delivoro),
+              corrigindo incidentes e desenvolvendo novas features para o sistema utilizando
+              as seguintes tecnologias: Java 13, SpringBoot, Stripes, Javascript, CSS.
+            </p>
+          </div>
+
+          <div class="flex flex-column mt-30">
+            <div class="flex flex-row align-center">
+              <div class="width-50-px flex flex-row align-center mg-10">
+                <img src="img/dxc.png" class="circle width-50-px cursor-pointer" />
+              </div>
+              <h3>Desenvolvedor - Estagiário</h3>
+            </div>
+            <p class="mt-15">
+              Atuo no desenvolvimento e manutenção de ferramentas internas, utilizando tecnologias
+              como: Docker, Jenkins, Django, React, Java...
+            </p>
+          </div>
+
+          <div class="flex flex-column mt-30">
+            <div class="flex flex-row align-center">
+              <div class="width-50-px flex flex-row align-center mg-10">
+                <img src="img/git.png" class="circle width-50-px cursor-pointer" />
+              </div>
+              <h3>Desenvolvedor na comunidade</h3>
+            </div>
+            <p class="mt-15">
+              No tempo livre, desenvolvo projetos próprios... Alguns podem ser encontados publicamente em meu
+              github: leoelias023.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
   </body>
 </html>

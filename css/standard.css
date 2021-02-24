@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-weight: 100;
+}
+
+
+.circle {
+    border-radius: 50%;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    transition: transform 0.1s;
+}
+
+.circle:hover {
+    transform: scale(1.05)
+}
+
+
+/** cursors */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+/** Widths */
+
+.width-50-p {
+    width: 50%;
+}
+
+.width-70-p {
+    width: 70%;
+}
+
+.width-50-px {
+    width: 50px;
+}
+
+.width-100-px {
+    width: 100px;
+}
+
+.width-150-px {
+    width: 150px;
+}
+
+.height-150-px {
+    height: 150px;
+}
+
+/** Flex layout */
+
+.flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-gap > * {
+    margin: 10px;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-evenly {
+    justify-content: space-evenly;
+}
+
+.height-100-p {
+    height: 100%;
+}
+
+
+/** Margins */
+
+.mg-10 {
+    margin: 10px;
+}
+
+.mg-20 {
+    margin: 20px;
+}
+
+.mg-30 {
+    margin: 30px;
+}
+
+.mg-40 {
+    margin: 40px;
+}
+
+.mg-50 {
+    margin: 50px;
+}
+
+.mg-60 {
+    margin: 60px;
+}
+
+.mt-15 {
+    margin-top: 15px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+
+/** Fonts */
+
+.font-size-small {
+    font-size: 15px;
+}
+
+.font-size-medium {
+    font-size: 18px;
+}
+
+.font-size-high {
+    font-size: 20px;
+}
+
+.text-indent > p {
+    text-indent: 30px;
+}
+
+.text-justify > * {
+    text-justify: inter-word;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 60% 400px;
+    grid-template-areas: "main aside";
+    grid-auto-rows: 100px;
+    padding: 30px 100px;
+}
+
+#main-grid-area {
+    grid-area: main;
+}
+
+#aside-grid-area {
+    grid-area: aside;
+}
