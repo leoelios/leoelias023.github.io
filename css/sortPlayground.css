@@ -8,6 +8,7 @@
 .bars {
   width: 100%;
   overflow-x: hidden;
+  text-align: center;
 }
 
 .vertical-bar {
