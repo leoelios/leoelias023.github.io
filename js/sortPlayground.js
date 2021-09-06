@@ -8,6 +8,12 @@
 const MAIN_CONTENT = "main-sort";
 const BAR_WIDTH = 50;
 
+const actionButtons = {
+  sort: document.getElementById("sort-button"),
+  randomize: document.getElementById("randomize-button"),
+  projects: document.getElementById("projects-button"),
+};
+
 const STATUS = {
   running: 1,
   stopped: 0,
@@ -41,14 +47,29 @@ const keymapEvents = {
   },
 };
 
-document.addEventListener("keyup", (event) => {
-  const { key } = event;
+actionButtons.randomize.addEventListener("click", () => {
+  executeAction("R");
+});
 
+actionButtons.sort.addEventListener("click", () => {
+  executeAction("S");
+});
+
+actionButtons.projects.addEventListener("click", () => {
+  executeAction("P");
+});
+
+function executeAction(key) {
   const keymapEvent = keymapEvents[key.toUpperCase()];
 
   if (keymapEvent && keymapEvent.run()) {
     keymapEvent.event();
   }
+}
+
+document.addEventListener("keyup", (event) => {
+  const { key } = event;
+  executeAction(key);
 });
 
 window.addEventListener("resize", () => {
@@ -224,8 +245,8 @@ function animateCircle({ color, zIndex }) {
 }
 
 function randomCssColor() {
-  const min = 0;
-  const max = 255;
+  const min = 80;
+  const max = 180;
 
   const red = randomInteger({
     max,

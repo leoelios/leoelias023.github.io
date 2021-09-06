@@ -48,13 +48,13 @@ body {
   border-radius: 50%;
   background: url("/img/my_photo.jpeg");
   background-size: 130px;
+  min-width: 130px;
   width: 130px;
   height: 130px;
 }
 
 .button {
   border-radius: 10px;
-  background-color: #fff;
   padding: 10px 30px;
   transition: transform 0.2s;
   font-weight: bolder;
@@ -77,18 +77,31 @@ body {
   transform: translateY(-3px);
 }
 
-.border-orange {
+.color-white {
+  color: #fff;
+}
+
+.color-red {
   color: #ea5959;
+}
+
+.color-yellow {
+  color: #ea9659;
+}
+
+.color-blue {
+  color: #4d5bd7;
+}
+
+.border-red {
   box-shadow: 7px 7px 0px #ea5959;
 }
 
 .border-yellow {
-  color: #ea9659;
   box-shadow: 7px 7px 0px #ea9659;
 }
 
 .border-blue {
-  color: #4d5bd7;
   box-shadow: 7px 7px 0px #4d5bd7;
 }
 
@@ -125,6 +138,10 @@ body {
   animation: grow 1s;
 }
 
+.background-color-white {
+  background-color: #fff;
+}
+
 .background-color-red {
   background-color: #ea5959;
 }
@@ -135,6 +152,27 @@ body {
 
 .background-color-blue {
   background-color: #4d5bd7;
+}
+
+#projects {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+}
+
+.icon-bar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.icon {
+  font-size: 30px;
+  color: #ea7b59;
+  margin-right: 20px;
 }
 
 @keyframes grow {
@@ -155,9 +193,23 @@ body {
   }
 }
 
-#projects {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  z-index: 5;
+@media only screen and (max-width: 652px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-photo {
+    margin-bottom: 20px;
+  }
+
+  .about-me-description {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 916px) {
+  .center-content {
+    width: 90%;
+  }
 }
