@@ -6,3 +6,9 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+
+button {
+  border: none;
+  outline: 0;
+  cursor: pointer;
+}

@@ -20,6 +20,9 @@ const state = {
   sort: {
     status: STATUS.stopped,
   },
+  projects: {
+    status: STATUS.stopped,
+  },
   resized: false,
 };
 
@@ -31,6 +34,10 @@ const keymapEvents = {
   S: {
     event: applyBubbleSort,
     run: () => state.sort.status === STATUS.stopped,
+  },
+  P: {
+    event: showProjects,
+    run: () => true,
   },
 };
 
@@ -50,6 +57,22 @@ window.addEventListener("resize", () => {
   }
 });
 
+function showProjects() {
+  const content = document.getElementById("projects");
+
+  animateCircle({
+    color: "blue",
+    zIndex: 4,
+  });
+
+  setTimeout(() => {
+    content.classList.add("background-color-blue");
+    content.classList.remove("hidden");
+  }, 400);
+
+  console.log("Please, show me the projects");
+}
+
 function getWindowWidth() {
   return document.body.offsetWidth;
 }
@@ -59,6 +82,9 @@ function sleep(milliseconds) {
 }
 
 async function applyBubbleSort() {
+  animateCircle({
+    color: "yellow",
+  });
   updateStatusSort(STATUS.running);
 
   const bars = Array(...document.querySelector(".bars").children).map((bar) => {
@@ -118,6 +144,10 @@ function updateStatusSort(status) {
 }
 
 function randomize() {
+  animateCircle({
+    color: "red",
+  });
+
   updateStatusRandomize(STATUS.running);
 
   const barsElement = document.querySelector(".main-sort .bars");
@@ -180,6 +210,17 @@ function randomVerticalBar() {
 
 function randomInteger({ min, max }) {
   return Math.floor(Math.random() * max) + min;
+}
+
+function animateCircle({ color, zIndex }) {
+  const circle = document.createElement("div");
+  circle.className = `background-circle background-color-${color}`;
+
+  if (zIndex) {
+    circle.style.zIndex = zIndex;
+  }
+
+  document.querySelector(".circle-events").appendChild(circle);
 }
 
 function randomCssColor() {
